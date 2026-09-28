@@ -1,669 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./_css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-    
-    <title>Portifolio Danilo</title>
-    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
-
-</head>
-<body>
-    
-    <!--HEADER-->
-   
-
-        <header class="header">
-            <div class="nav_header">
-                <span class="name-perfil"><i class="uil uil-angle-left-b"></i>/Danilo/<i class="uil uil-angle-right-b"></i></span>
-                <div class="toggle" id="open-menu" onclick="abrirMenu()">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-
-                <nav class="nav_wrapper" id="nav_wrapper" >     
-                                          
-                        <ul class="menu">
-                            <li><a href="#introduction" class="nav_link"><i class="fas fa-home"></i>Home</a></li>
-                            <li><a href="#about-me" class="nav_link"><i class="far fa-user"></i>Sobre</a></li>                            
-                            <li><a href="#skill" class="nav_link"><i class="far fa-file-alt"></i>Skill</a></li>
-                            <li><a href="#qualification" class="nav_link"><i class="far fa-image"></i>Qualificação</a></li>                    
-                            <li><a href="#portifolio" class="nav_link"><i class="far fa-image"></i>Projetos</a></li>                    
-                            <li><a href="#contactme" class="nav_link"><i class="fas fa-sign-in-alt"></i>Contato</a></li>
-                        </ul>
-                        <span class="close-menu" onclick="closeMenu()">&times;</span>
-                 </nav>
-            </div>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danilo Santos | Desenvolvedor Front-end</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Front-end com experiência em HTML, CSS, JavaScript, React, Bootstrap e Liferay. Interfaces responsivas, acessíveis e performáticas."
+    />
+    <meta
+      property="og:title"
+      content="Danilo Santos | Desenvolvedor Front-end"
+    />
+    <meta
+      property="og:description"
+      content="Interfaces responsivas, acessíveis e performáticas. Veja meus projetos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="_img/vidracaria.png" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="_css/main.css" />
+    <script src="_js/portifolio.js" defer></script>
+  </head>
+  <body class="portfolio-page">
+    <header>
+      <div class="wrap nav">
+        <a href="#inicio" class="logo">&lt;/Danilo/&gt;</a>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#trajetoria">Trajetória</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </header>
 
     <main>
+      <section class="hero" id="inicio">
+        <div class="wrap">
+          <div>
+            <span class="status"><i></i>Aberto a novas oportunidades</span>
+            <h1>
+              Front-end que transforma design em interfaces rápidas e
+              acessíveis.
+            </h1>
+            <p class="lead">
+              Sou Danilo Santos, desenvolvedor front-end. Construo e mantenho
+              aplicações web com HTML, CSS, JavaScript, React, Bootstrap e
+              Liferay, com foco em qualidade e experiência do usuário.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#projetos">Ver projetos</a>
+              <a class="btn" href="Danilo-dev.pdf" download>Baixar CV</a>
+              <a class="btn" href="#contato">Contato</a>
+            </div>
+          </div>
+          <div class="code" aria-hidden="true">
+            <div class="bar"><b></b><b></b><b></b></div>
+            <pre><span class="k">const</span> <span class="a">danilo</span> = {
+  role: <span class="s">"Front-end Developer"</span>,
+  stack: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>,
+          <span class="s">"React"</span>, <span class="s">"Liferay"</span>],
+  focus: [<span class="s">"acessibilidade"</span>,
+          <span class="s">"performance"</span>, <span class="s">"UX"</span>],
+  learning: <span class="s">"APIs & JavaScript"</span>,
+  location: <span class="s">"São Paulo, BR"</span>
+};</pre>
+          </div>
+        </div>
+      </section>
 
-            <!--Introduction-->
-        <section id="introduction">
-            <div class="capa" data-anime="center"> 
-                <div class="capa-img">
-                    <img src="./_img/perfil2.svg" alt="">
-                </div>               
-                <div class="box-introduction">
-                    <h1>Danilo Santos</h1>
-                        <a class="midia_social" href="https://www.linkedin.com/in/daniloadscavalcante/"><i class="uil uil-linkedin"></i></a>
-                        <a class="midia_social" href="https://github.com/daniloadscavalcante"><i class="uil uil-github"></i></a>
-                        <a class="midia_social" href="mailto:daniloadscavalcante@gmail.com"><i class="uil uil-envelope"></i></a>
-                        <a class="midia_social" href=" http://wa.me/5511944939323"><i class="uil uil-whatsapp"></i></a>
-                        <p>Desenvolvedor Front end.</p>
-                        <p>Crio interfaces modernas, responsivas, acessíveis e performáticas utilizando HTML, CSS, JavaScript, Bootstrap e Liferay.
-Atuo no desenvolvimento e manutenção de aplicações web, focando em qualidade, usabilidade e evolução contínua.
-</p>
-                        
-                        <a href=" http://wa.me/5511944939323" class="btn-contact-me btn">Contato</a>                        
-                    </div>  
-                    
-                    
-                </div>
-        </section>
+      <section id="sobre">
+        <div class="wrap about rv">
+          <div>
+            <h2>Sobre</h2>
+            <p>
+              <strong>Desenvolvedor Front-End</strong> com experiência na
+              construção e manutenção de interfaces web. Trabalho com soluções
+              responsivas, código organizado, acessibilidade e boa experiência
+              de uso.
+            </p>
+            <p>
+              Tenho vivência em manutenção e evolução de sistemas existentes,
+              garantindo qualidade e consistência nas entregas.
+            </p>
+            <p>
+              Também realizo <strong>treinamentos para clientes</strong>, o que
+              fortalece minha comunicação e colaboração com diferentes áreas.
+              Hoje estou evoluindo em JavaScript e integração com APIs.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact">
+              <span>experiência atual</span><b>Front-end Jr · InnovSoftware</b>
+            </div>
+            <div class="fact">
+              <span>diferencial</span><b>Liferay + treinamento de clientes</b>
+            </div>
+            <div class="fact">
+              <span>trabalhos</span><b>20+ projetos · 3 empresas</b>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <!--About Me-->
-            <section id="about-me" >
-                <div class="about" data-anime="left"> 
-                    <div class="about_box_description">
-                        <div class="about_photo_me">                            
-                            <img src="_img/about-me.svg" alt="thumb foto perfil">                        
-                        </div>
-                        <h2>Sobre</h2>
-                        <div class="description_about">
-                            <p>
-                                   Sou Desenvolvedor Front-End com experiência na construção e manutenção de interfaces web utilizando HTML, CSS, JavaScript, Bootstrap e Liferay.
-
-Atuo no desenvolvimento de soluções responsivas, com foco em organização de código, acessibilidade e experiência do usuário. Tenho experiência com manutenção e evolução de sistemas existentes, garantindo qualidade e consistência nas entregas.
-
-Além do desenvolvimento, também realizo treinamentos para clientes, o que fortalece minha comunicação, organização e colaboração com diferentes áreas.
-
-Estou em constante evolução técnica, principalmente em JavaScript e integração com APIs, com foco no crescimento como desenvolvedor front-end.                           
-                            </p>
-                              <div class="box_info_me">
-                                 <div class="info_me">
-                                        <div class="item_info_me">
-                                            <span class="number">12+</span>
-                                            <span>Projetos<br>Feitos</span>
-                                        </div>
-                                        <div class="item_info_me">
-                                            <span class="number">03+</span>
-                                            <span>Empresas<br>Trabalhadas</span>
-                                        </div>
-                                  </div>
-                              </div>
-
-             <!--CURRICULO-->  
-                            <form action="Danilo-dev.pdf"> 
-                                    <div class="curriculo">                                     
-                                            <button class="btn-curriculo btn" type="submit">Download CV<i class="uil uil-download-alt"></i>
-                                            </button>
-                                    </div>
-                            </form>
-                        </div>
-                    </div>            
-                </div>
-            </section>
-
-            <!--SKILL-->
-            <section id="skill">
-                <div class="box_skills" data-anime="right">                                    
-                    <div class="title-sections">
-                        <h2>Skills</h2>
-                    </div>
-                    <div class="box_skill_item">
-                        <img src="./_img/html5.svg" alt="icone html5">
-                        <img src="./_img/css3-simple.svg" alt="icone css3">
-                        <img src="./_img/java-script.svg" alt="icone javascript">
-                        <img src="./_img/bootstrap.svg" class="icon-space" alt="icone boostrap">
-                        <img src="./_img/github.svg" class="icon-space" alt="icone github">
-                        <img src="./_img/figma.svg" alt="icone figma">
-                        <img src="./_img/logo-lfieray.png" alt="icone liferay" class="logoLiferay">                                                     
-                    </div>
-                </div>                             
-            </section>
-
-            <!--Qualificação-->            
-            <section id="qualification" data-anime="left">
-                <div class="box_quali">
-                    
-                    <div class="title_quali title-sections">
-                        <h2>Qualificação</h2>
-                        <p>Educação / experiência.</p>
-                    </div>
-
-                    <div class="subtitle_edu_wor">
-                        <span id="btnEducation" onclick="showEducation()"><i class="fas fa-book icon_education"></i>Educação</span>
-                        <span id="btnWork" onclick="showWork()"><i class="uit uit-bag icon_education"></i>Experiências</span>
-                    </div>                                        
-                </div>
-                    <!--EDUCAÇÃO-->
-                    <div id="box_educa">
-                        <div class="box_education" id="box_education">
-
-                            <div class="grid-item">
-                                <span class="title_item">Análise de sistemas</span>
-                                <p>Anhaguera - University</p>
-                                <p><i class="uil uil-calender"></i>2016 - 2019</p>
-                            </div>
-
-                            <div class="grid-item">
-                                <span class="title_item">Sistemas para internet</span>
-                                <p>Faculdade FAM - University</p>
-                                <p><i class="uil uil-calender"></i>2022 - 2024</p>
-                            </div>
-
-                            <div class="grid-item">
-                                <span class="title_item">Curso front-end</span>
-                                <p>Udemy cademy</p>
-                                <p><i class="uil uil-calender"></i>2022 - 2022</p>
-                            </div>
-
-                            <div class="grid-item">
-                                <span class="title_item">Mistérios do linux</span>
-                                <p>Ung - University</p>
-                                <p><i class="uil uil-calender"></i>2019 - 2019</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--EXPERIENCIAS-->
-                    <div id="box_exper">
-                        <div class="box_experience" id="box_experience">                                                      
-                            <div class="grid-item">
-                                <span class="title_item">Desenvolvedor front-end jr</span>
-                                <p>InnovSoftware</p>
-                                <p><i class="uil uil-calender"></i>02/2022 - Atual</p>
-                            </div>
-                            
-                            <div class="grid-item">
-                                <span class="title_item">Web Designer</span>
-                                <p>Cirúrgica Lucena</p>
-                                <p><i class="uil uil-calender"></i>02/2021 - 09/2021.</p>
-                            </div>
-
-                            <div class="grid-item">
-                                <span class="title_item">Desenvolvedor front-end</span>
-                                <p>Freelancer</p>
-                                <p><i class="uil uil-calender"></i>02/2022 - 03/2022</p>
-                            </div>
-
-                            <div class="grid-item">
-                                <span class="title_item">Técnico</span>
-                                <p>Assistência Técnica de micro</p>
-                                <p><i class="uil uil-calender"></i>2018 - 2019</p>
-                            </div>                        
-                        </div>
-                    </div>     
-            </section>
-
-            <!-- Projetos-->
-            <section id="portifolio" data-anime="center">
-                    <div class="titile-project title-sections">
-                        <h2>Projetos</h2>
-                        <p>Projetos & Freelas.</p>
-                    </div>
-                    <div class="projects-cards">
-                        <div class="primary-section-card">
-                            
-                            <div class="card">
-                                <a href="https://freela-site-vidracaria.vercel.app/" target="_blank"><img src="_img/vidracaria.png" alt="thumbs vidraçaria"></a>
-
-                                <div class="card_description">
-                                    <h4>Projeto vidraçaria </h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-react" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i>     
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                        
-                                    </div>
-                                    <p>Esse projeto foi desenvolvido com react, utilizando lib emailJs,
-                                        react-glider, react-icons, react-router, react-slick reutilização
-                                        de componentes e responsividade.
-                                    </p>               
-                                       
-                                    <a href="https://freela-site-vidracaria.vercel.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <a href="https://site-studio-beleza.vercel.app/" target="_blank"><img src="_img/estudio&beleza.png" alt="thumbs studio"></a>
-
-                                <div class="card_description">
-                                    <h4>Estudio&beleza Clone react </h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-react" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i>     
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                        
-                                    </div>
-                                    <p>Esse projeto é um clone, do projeto Estudio&beleza em react foi utilizado react-router, react-glide, react-slick, conceito de componentes e responsividade</p>               
-                                       
-                                    <a href="https://site-studio-beleza.vercel.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <a href="https://estudiobeleza.netlify.app/" target="_blank"><img src="_img/estudio&beleza.png" alt="thumbs studio"></a>
-
-                                <div class="card_description">
-                                    <h4>Estudio&beleza</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i>     
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                        
-                                    </div>
-                                    <p>Para desenvolver esse projeto foi realizado um prototipo, posteriomente as tech
-                                        html, css, js, libs-js e conceitos de responsividade.</p>               
-                                       
-                                    <a href="https://estudiobeleza.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>                                     
-                            <div class="card">
-                                <a href="https://eletronicajaclesom.netlify.app/" target="_blank"><img src="_img/eletronica.png" alt="thumb eletronica"></a>
-
-                                <div class="card_description">
-                                    <h4>Freela - Eletrônica</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i> 
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                   
-                                    </div>
-                                    <p>Esse projeto foi um freela, objetivo proposto aumentar a visibilidade e a demanda de serviços, foi utilizado as seguintes tecnologias: html, slick slider, css e javascript. Conceito de responsividade e design foram utilizados também.</p>
-                                    
-                                    <a href="https://eletronicajaclesom.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>                            
-                                                   
-                        </div>                        
-                        <div class="second-section-card">
-                            <div class="card">
-                                <a href="https://desafiochuva.netlify.app/" target="_blank"><img src="_img/desafioChuva.png" alt="thumb landing page"></a>
-
-                                <div class="card_description">
-                                    <h4>Teste - empresa</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i> 
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                          
-                                    </div>
-                                    <p>Esse foi um teste de uma empresa para preencher a vaga de (estágio front end), foi fornecido layout feito no figma. Conclui esse desafio usando as tech, html,css, flexbox<br></p>
-                                    
-                                    <a href="https://desafiochuva.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div> 
-                            <div class="card">
-                                <a href="https://www.studiouniversofeminino.com.br" target="_blank"><img src="_img/studio-universo.png" alt="thumbs studio"></a>
-
-                                <div class="card_description">
-                                    <h4>StudioUniverso</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i>     
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                        
-                                    </div>
-                                    <p>Esse projeto foi um freela, objetivo proposto foi atrair clientes de qualquer localidade, foi utilizado as tecnologias: html, css e javascript. Conceito de responsividade e design foram utilizados também.</p>
-                                    
-                                    <a href="https://studiouniversofeminino.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div> 
-                            <div class="card">
-                                <a href="https://landing-page-ingles.netlify.app/" target="_blank"><img src="_img/landing-page.png" alt="thumb landing page"></a>
-
-                                <div class="card_description">
-                                    <h4>Landing Page</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                    
-                                        <i class="uil uil-github" title="github"></i>     
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>      
-                                    </div>
-                                    <p>Esse é um clone de uma landing page  realizado apenas para melhorar as habilidades. Obs: Todos direitos reservado <br><q><a href="https://www.agoraeufaloacademy.com/serie-gratuita" target="_blank" style="color: orange;">www.agoraeufaloacademy.com/serie-gratuita</a></q></p>
-                                    
-                                    <a href="https://landing-page-ingles.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://seupet.netlify.app/" target="_blank"><img src="_img/Petshop.png" alt="thumb pizzaria"></a>
-
-                                <div class="card_description">
-                                    <h4> Petshop</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i>
-                                        <i class="fa-brands fa-bootstrap" title="boostrap"></i>
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>
-                                    </div>
-                                    <p>Site desenvolvido para colocar em prática os conhecimentos adquirido no curso de bootstrap, antes de codificar desenvolvi o prototipo no figma e posteriomente a codificação</p>
-                                
-                                    <a href="https://seupet.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://pizzamia3.netlify.app/" target="_blank"><img src="_img/pizzaMia.png" alt="thumb pizzaria"></a>
-
-                                <div class="card_description">
-                                    <h4> Website - PizzaMiaIII</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>    
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                            
-                                    </div>
-                                    <p>Site desenvolvido apenas para colocar em práticar tecnologias: html, css, javascript e bootstrap. Foi desenvolvido usando conceitos de design, resposividade.</p>
-                                
-                                    <a href="https://pizzamia3.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                           
-                            <div class="card">
-                                <a href="https://clonemercadolivre.netlify.app/" target="_blank"><img src="_img/cloneML.png" alt="thumb mercado livre"></a>
-
-                                <div class="card_description">
-                                    <h4> Website - Mercado livre</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i>
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                 
-                                    </div>
-                                    <p>Clone da pagina de anuncios do mercado livre, esse projeto foi desenvolvido para testa minhas habilidades nas tecnologias html e css. </p>
-                                
-                                    <a href="https://clonemercadolivre.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-
-                            <div class="card">
-                                <a href="https://fisiobody.netlify.app/" target="_blank"><img src="./_img/fisio.png" alt="thumb fisioterapia"></a>
-
-                                <div class="card_description">
-                                    <h4>Website - Fisioterapia</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>                                    
-                                        <i class="fa-brands fa-figma" title="figma"></i>  
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                  
-                                    </div>
-                                    <p>Projeto feito con conhecimentos adquirido no curso de front end, usando conceitos de desgin e responsividade. Projeto realizado no figma e posteriomente desenvolvido.</p>
-                                
-                                    <a href="https://fisiobody.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://conceitoresponsive.netlify.app/" target="_blank"><img src="_img/mobilefirst.png" alt="thumb projeto mobile"></a>
-
-                                <div class="card_description">
-                                    <h4>Website - Mobile first</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i> 
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                   
-                                    </div>
-                                    <p>Projeto feito no curso de web design, utilizando a metodologia mobile first, demostrando as vantagens e praticidade da metodologia </p>
-                                
-                                    <a href="https://conceitoresponsive.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://projects-strata.netlify.app/" target="_blank"><img src="_img/projects-strata.png" alt="thumb projeto strata"></a>
-
-                                <div class="card_description">
-                                    <h4>Website - Strata</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-github" title="github"></i>  
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>
-                                    </div>
-                                    <p>Projeto feito no curso de web design, colocando em pratíca todo conhecimento adquirido no modulo do curso. Conceitos de semântica, tabelas, tags para expor codigos, lista ordenada. Porém não é repsonsivo. </p>
-                                
-                                    <a href="https://projects-strata.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://gamesnipe.netlify.app/" target="_blank"><img src="_img/tela-loginGame.png" alt="thumg tela de login"></a>
-
-                                <div class="card_description">
-                                    <h4>Tela Login game</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i>  
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                  
-                                    </div>
-                                    <p>Projeto feito para explorar a criatividade, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM, totalmente responsivo. </p>
-                                
-                                    <a href="https://gamesnipe.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://card-frontendmentor2.netlify.app/" target="_blank"><img src="_img/cardFrontMEntor.png" alt="thumb card"></a>
-
-                                <div class="card_description">
-                                    <h4>Card Frontend Mentor</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i>  
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                 
-                                    </div>
-                                    <p>Desafio do frontend mentor concluido, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM, totalmente responsivo. </p>
-                                
-                                    <a href="https://card-frontendmentor2.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://clone-facebook-login.netlify.app/" target="_blank"><img src="_img/telaFacebook.png" alt="thumg facebook"></a>
-
-                                <div class="card_description">
-                                    <h4>Clone tela de login facebook</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i> 
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                   
-                                    </div>
-                                    <p>Clone da tela de login do facebook, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM e conceitos de mobile first. </p>
-                                
-                                    <a href="https://clone-facebook-login.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://clone-wise-up.netlify.app/" target="_blank"><img src="_img/telaWiseUp.png" alt="thumb wiseup"></a>
-
-                                <div class="card_description">
-                                    <h4>Clone tela de login do Wise up</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>
-                                        <i class="uil uil-java-script" title="javascript"></i>
-                                        <i class="uil uil-github" title="github"></i> 
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                   
-                                    </div>
-                                    <p>Clone da tela de login do Wise up, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM e responsividade. </p>
-                                
-                                    <a href="https://clone-wise-up.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://3-cardfrontendmentor.netlify.app/" target="_blank"><img src="_img/3cardFrontendMentor.png" alt="thumb card"></a>
-
-                                <div class="card_description">
-                                    <h4>Card Frontend Mentor</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i>    
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                
-                                    </div>
-                                    <p>Desafio do frontend mentor concluido, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM, totalmente responsivo. </p>
-                                
-                                    <a href="https://3-cardfrontendmentor.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://card-done-frontendmentor.netlify.app/" target="_blank"><img src="_img/card-frontendMentor.png" alt="thumb card"></a>
-
-                                <div class="card_description">
-                                    <h4>Card Frontend Mentor</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i>  
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                  
-                                    </div>
-                                    <p>Desafio do frontend mentor concluido, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM, totalmente responsivo. </p>
-                                
-                                    <a href="https://card-done-frontendmentor.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <a href="https://teste-webdesign.netlify.app/" target="_blank"><img src="_img/teste-landing-page.png" alt="thumb lamding page"></a>
-
-                                <div class="card_description">
-                                    <h4>Landing page</h4>
-                                    <div class="icon-card-tech">
-                                        <i class="uil uil-html5" title="html5"></i>
-                                        <i class="uil uil-css3-simple" title="css3"></i>                                        
-                                        <i class="uil uil-github" title="github"></i>  
-                                        <button class="btn-detail">
-                                            Detalhe <i class="uil uil-angle-down"></i>
-                                        </button>                                  
-                                    </div>
-                                    <p>Desafio de uma landing page, colocando em pratíca todo conhecimento adquirido em cursos. Conceitos de semântica, usando a metodologia BEM, totalmente responsivo. </p>
-                                
-                                    <a href="https://teste-webdesign.netlify.app/" class="btn card-btn" target="_blank">Ver<i class="fas fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>  
-                        </div>
-                        <button type="button"class="btn-ver-mais" id="btn-ver-mais">Ver mais <i class="uil uil-angle-down"></i></button>
-                    </div>
-                
-            </section>
-
-            <!--Contactme-->
-            <section id="contactme" data-anime="left">
-                    <div class="box_title_contactme">
-                        <h2>Vamos conversar?</h2>                        
-                    </div>
-                    
-                    <div class="box_contactme">
-                        <a class="social_contact" href="https://www.linkedin.com/in/daniloadscavalcante/"><i class="uil uil-linkedin"></i></a>
-                        <a class="social_contact" href="mailto:daniloadscavalcante@gmail.com"><i class="uil uil-envelope"></i></a>
-                        <a class="social_contact" href=" http://wa.me/5511944939323"><i class="uil uil-whatsapp"></i></a>
-                   </div>                    
-            </section>
-
-            <!--Sobre Portifolio-->
-            <section>
-                    <div class="box_title_portifolio" data-anime="right">
-                        <h2>Sobre o Portfólio</h2>
-                        <p>
-                            Esse portfólio foi desenvolvido com as tecnologias html5,css3 e javascript. Também foi 
-                            utilizado conceito de layout responsive, portfólio estruturado com flexbox e css grid. O slide foi feito usando a biblioteca slick slider, também foi usado o conceito de mobile first.
-                        </p>
-                    </div>
-                                         
-            </section>
-
-            <footer>
-              <div class="box_footer">
-                 <p>Desenvolvedor Front-End focado na criação de interfaces modernas, responsivas e performáticas, <br>contribuindo com produtos digitais e evolução contínua na área.</p>
+      <section id="skills">
+        <div class="wrap rv">
+          <h2>Skills</h2>
+          <p class="sub">
+            Tecnologias que uso no dia a dia e as que estou aprofundando.
+          </p>
+          <div class="skills">
+            <div class="sk">
+              <h3>Linguagens</h3>
+              <div class="tags">
+                <span class="tag">HTML5</span><span class="tag">CSS3</span
+                ><span class="tag">JavaScript</span>
               </div>
-                                      
-            </footer>
+            </div>
+            <div class="sk">
+              <h3>Frameworks e libs</h3>
+              <div class="tags">
+                <span class="tag">React</span
+                ><span class="tag">React Router</span
+                ><span class="tag">Bootstrap</span
+                ><span class="tag">jQuery</span>
+              </div>
+            </div>
+            <div class="sk">
+              <h3>Plataformas e ferramentas</h3>
+              <div class="tags">
+                <span class="tag">Liferay</span
+                ><span class="tag">Git / GitHub</span
+                ><span class="tag">Figma</span
+                ><span class="tag">Netlify / Vercel</span>
+              </div>
+            </div>
+            <div class="sk">
+              <h3>Em evolução</h3>
+              <div class="tags">
+                <span class="tag dim">Integração com APIs</span
+                ><span class="tag dim">JavaScript avançado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <!--import blibioteca-->    
-            <script src="https://kit.fontawesome.com/3f3417947e.js" crossorigin="anonymous"></script>        
-            <script  src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-            <script  src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-            <script  src="slick-1.8.1/slick/slick.js"></script>
-            <script  src="_js/portifolio.js"></script>
-            <script  src="_js/portfolio-scroll.js"></script>
-            
+      <section id="projetos">
+        <div class="wrap">
+          <h2 class="rv">Projetos</h2>
+          <p class="sub rv">
+            Trabalhos reais para clientes e projetos autorais. Os exercícios de
+            estudo ficam no laboratório, no final.
+          </p>
+          <div class="grid" id="featured"></div>
+          <div class="lab-h">
+            <div>
+              <h3>Laboratório</h3>
+              <p class="sub lab-description">
+                Clones e desafios que fiz para praticar.
+              </p>
+            </div>
+            <button class="btn sm" id="labBtn" aria-expanded="false">
+              Mostrar todos
+            </button>
+          </div>
+          <div class="lab" id="lab"></div>
+        </div>
+      </section>
+
+      <section id="trajetoria">
+        <div class="wrap two rv">
+          <div>
+            <h3>Experiência</h3>
+            <ul class="tl">
+              <li>
+                <b>Desenvolvedor Front-end Jr III</b
+                ><span class="m">InnovSoftware · 02/2022 – atual</span>
+                <p>
+                  Desenvolvimento e manutenção de interfaces com HTML, CSS,
+                  JavaScript, Bootstrap e Liferay. Treinamentos para clientes.
+                </p>
+              </li>
+              <li>
+                <b>Web Designer</b
+                ><span class="m">Cirúrgica Lucena · 02/2021 – 09/2021</span>
+              </li>
+              <li>
+                <b>Desenvolvedor Front-end (Freelancer)</b
+                ><span class="m">Sites para pequenos negócios</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Formação</h3>
+            <ul class="tl">
+              <li>
+                <b>Sistemas para Internet</b
+                ><span class="m">Faculdade FAM · 2022 – 2024</span>
+              </li>
+              <li>
+                <b>Análise de Sistemas</b
+                ><span class="m">Anhanguera · 2016 – 2019</span>
+              </li>
+              <li><b>Curso Front-end</b><span class="m">Udemy · 2022</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato">
+        <div class="wrap">
+          <div class="contact rv">
+            <h2>Vamos conversar?</h2>
+            <p>
+              Tem uma vaga, um projeto ou só quer trocar uma ideia? Me chame por
+              onde for melhor.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="mailto:daniloadscavalcante@gmail.com"
+                >E-mail</a
+              >
+              <a
+                class="btn"
+                href="https://wa.me/5511944939323"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/daniloadscavalcante/"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                class="btn"
+                href="https://github.com/daniloadscavalcante"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</div>
 
-</body>
-
+    <footer>
+      <div class="wrap">
+        <span>© <span id="yr"></span> Danilo Santos</span>
+        <a href="./comercial.html">Site comercial</a>
+      </div>
+    </footer>
+  </body>
 </html>
